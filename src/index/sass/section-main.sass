@@ -12,14 +12,24 @@
 .nav
 	font-family: 'Dosis', 'sans-serif'
 	text-transform: uppercase
+	font-weight: 700
+	font-size: 20px
 	a
 		display: inline-block
 		margin-left: 20px 
 		text-decoration: none
 		color: white
 		letter-spacing: 2px
-	font-weight: 700
-	font-size: 150%
+		border-radius: 10px
+		padding: 5px
+		transition: 0.3s
+		&:hover
+			background-color: white
+			color: black
+			transition: 0.3s
+	a:first-child
+		background-color: white
+		color: black
 
 a.logo
 	background:
@@ -46,3 +56,34 @@ a.logo
 	background:
 		image: url(../images/text.png)
 		size: 100% 100%
+.play-button
+	background: white
+	width: 170px
+	height: 45px
+	margin: 0 auto
+	outline: none
+	border: none
+	border-radius: 8px
+	display: flex
+	align-items: center
+	justify-content: space-around
+	padding: 5px
+	color: #333
+	p
+		font-size: 18px
+		margin: 0
+		font-weight: 700
+		letter-spacing: 1px
+	span
+		width: 35px
+		height: 35px
+		background-image: url(../images/play-button.png)
+		background-size: 100% 100%
+	&:hover
+		transform: scale(1.1,1.1)
+		transition-duration: 0.2s
+		cursor: pointer
+	transform: scale(1,1)
+	transition-duration: 0.2s
+.spacediv
+	height: 20px
