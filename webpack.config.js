@@ -25,6 +25,11 @@ module.exports = {
                 loaders: ['html-loader','pug-html-loader']
             },
             {
+                test: /\.mp4$/,
+                exclude: /(node_modules|bower_components)/,
+                use: ['file-loader']
+            },
+            {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 exclude: /(node_modules|bower_components)/,
                 use:
