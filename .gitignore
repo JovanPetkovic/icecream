@@ -1,5 +1,9 @@
 # Created by https://www.gitignore.io/api/node,images,sublimetext
 
+### Videos ###
+*.mp4
+*.ogg
+
 ### Images ###
 # JPEG
 *.jpg
