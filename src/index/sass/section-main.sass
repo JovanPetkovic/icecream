@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis:400,700');
 @keyframes bounce
 	20%
-		bottom: 45px
+		bottom: 55px
 	30%
 		bottom: 15px
 	40%
@@ -17,12 +17,16 @@
 	height: 100vh
 	position: relative
 .header
+	z-index: 2
 	display: flex
-	max-width: 100%
+	width: 100%
 	justify-content: space-between
 	align-items: center
-	margin: 0 50px
+	position: fixed
+	background-color: transparent
+	transition: all 0.5s ease
 .nav
+	margin-right: 50px
 	font-family: 'Dosis', 'sans-serif'
 	text-transform: uppercase
 	font-weight: 700
@@ -38,13 +42,14 @@
 		transition: color 0.3s, background-color 0.3s
 		&:hover
 			background-color: white
-			color: black
+			color: #333
 			transition: color 0.3s, background-color 0.3s
 	a:first-child
 		background-color: white
-		color: black
+		color: #333
 
 a.logo
+	margin-left: 50px
 	background:
 		image: url(../images/logo.png)
 		size: contain
@@ -53,11 +58,14 @@ a.logo
 	height: 108px
 	display: block
 .content
+	top: 50%
+	transform: translate(-50%,-50%)
+	left: 50%
 	color: white
 	text-align: center
-	margin: 0 auto
+	margin: 0
+	position: absolute
 	width: 50%
-	margin-top: 50px
 	p
 		font-family: 'Dosis', 'sans-serif'
 		font-weight: 400
@@ -101,6 +109,7 @@ a.logo
 .spacediv
 	height: 20px
 .first-scroll
+	z-index: 1
 	position: absolute
 	width: 35px
 	height: 35px
@@ -112,8 +121,25 @@ a.logo
 	left: 50%
 	margin-left: -17.5px
 	bottom: 15px
+	outline: none
 	animation:
 		duration: 3.5s
 		name: bounce
 		iteration-count: infinite
+	cursor: pointer
 		timing-function: ease-in-out
+.scroll-header
+	transition: all 0.5s ease
+	display: flex
+	background-color: #efefef
+	position: fixed
+	top: 0
+	.nav
+		a
+			color: #333
+			&:hover
+				background-color: #333
+				color: white
+			&:first-child
+				color: white
+				background-color: #333
