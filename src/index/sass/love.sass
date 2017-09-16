@@ -1,50 +1,49 @@
 @import url('https://fonts.googleapis.com/css?family=Kalam:700')
 @import url('https://fonts.googleapis.com/css?family=Dosis:400,700');
+.welcome
+	background-color: white
+	color: #8d63ab
+	grid-area: welcome
+	text-align: center
+	display: flex
+	flex-direction: column
+	align-items: center
+	font-size: 25px
+	font-family: "Kalam", 'cursive'
+	font-weight: 700
+	.parallax-line
+		display: flex
+		flex-direction: row
+		align-items: center
+		margin-top: 40px
+		.cupid
+			background-image: url(../images/cupid.png)
+			width: 65.3px
+			height: 49px
+			background-size: contain
+		.parallax-div
+			background-color: #8d65ab
+			height: 5px
+			margin: 5px
+			border-radius: 20px
+		.dot
+			background-color: #8d65ab
+			margin: 5px
+			width: 5px
+			height: 5px
+			border-radius: 100%
+	h1
+		margin-bottom: 0
+
+	h3
+		margin-top: 0
 .love
-	height: 2000px
+	height: 2200px
 	display: grid
 	grid-template-columns: repeat(6, 1fr)
 	grid-template-rows: repeat(8, 1fr)
 	grid-template-areas: "welcome welcome welcome welcome welcome welcome" "pic1 pic1 pic1 des1 des1 des1" "pic1 pic1 pic1 des1 des1 des1" "des2 des2 des2 pic2 pic2 pic2" "des2 des2 des2 pic2 pic2 pic2" "link1 link1 link2 link2 link3 link3" "img1 img1 img1 img2 img2 img2" "img3 img3 img3 img2 img2 img2"
 	width: 100%
-	.welcome
-		background-color: white
-		color: #8d63ab
-		grid-area: welcome
-		text-align: center
-		display: flex
-		flex-direction: column
-		align-items: center
-		font-size: 25px
-		font-family: "Kalam", 'cursive'
-		font-weight: 700		
-		.parallax-line
-			display: flex
-			flex-direction: row
-			align-items: center
-			margin-top: 20px
-			.cupid
-				background-image: url(../images/cupid.png)
-				width: 65.3px
-				height: 49px
-				background-size: contain
-			.parallax-div
-				background-color: #8d65ab
-				height: 5px
-				margin: 5px
-				border-radius: 20px
-			.dot
-				background-color: #8d65ab
-				margin: 5px
-				width: 5px
-				height: 5px
-				border-radius: 100%
-		h1
-			margin-bottom: 0
-
-		h3
-			margin-top: 0
-
 	.heart
 		overflow: hidden
 		display: flex
@@ -87,3 +86,72 @@
 			font-family: "Dosis", 'sans-serif'
 			font-weight: 400
 			font-size: 25px
+	.find-more
+		color: white
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		font-size: 25px
+		h1
+			margin: 0
+			margin-top: 30px
+			font-family: "Kalam", 'cursive'
+			font-weight: bold
+		p
+			margin-top: 0
+			font-family: "Dosis", 'sans-serif'
+			width: 70%
+		a
+			font-family: "Dosis", 'sans-serif'
+			font-weight: 700
+			text-transform: uppercase
+			font-size: 20px
+			margin-bottom: 30px
+			text-decoration: none
+			color: white
+			border: 2px white solid
+			padding: 10px
+			border-radius: 10px
+			transition: 0.5s
+			&:hover
+				transition: 0.5s
+				background-color: white
+				color: #333
+	#link1
+		grid-area: link1
+		background-color: #00A0E3
+	#link2
+		grid-area: link2
+		background-color: #EF4036
+	#link3
+		grid-area: link3
+		background-color: #8D65AB
+	.img-div1
+		grid-area: img1
+		background:
+			image: url(../images/img1.jpg)
+			size: 100% auto
+	.img-div2
+		grid-area: img2
+		background:
+			image: url(../images/img2.jpg)
+			size: 100% 100%
+	.img-div3
+		grid-area: img3
+		background:
+			image: url(../images/img3.jpg)
+			size: 100% auto
+			position: 20%
+
+
+
+
+
+
+
+
+
+
+
+

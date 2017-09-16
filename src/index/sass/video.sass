@@ -1,0 +1,82 @@
+.video
+	height: 1100px
+	color: white
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-template-rows: repeat(8, 1fr)
+	grid-template-areas: "welcome welcome welcome" "welcome welcome welcome" "video1 video2 video3" "video1 video2 video3" "footer footer footer" "footer footer footer" "footer footer footer"
+	.welcome
+		background-color: #00A0E3
+		grid-area: welcome
+		.parallax-line
+			.dot
+				background-color: white
+			.parallax-div
+				background-color: white
+		h1
+			color: white
+		h3
+			color: white
+	.video-show
+		display: flex
+		align-items: center
+		justify-content: center
+		background: 
+			size: 100%
+		button
+			transition: 0.3s
+			background-image: url(../images/play-button.png)
+			border: none
+			width: 64px
+			height: 64px
+			background-color: transparent
+			outline: none
+			&:hover
+				transform: scale(1.5,1.5)
+				transition: 0.3s
+				cursor: pointer
+				outline: none
+	.video1
+		background:
+			image: url(../images/video-1-home.jpg)
+		grid-area: video1
+	.video2
+		background:
+			image: url(../images/video-2-home.jpg)
+		grid-area: video2
+	.video3
+		background:
+			image: url(../images/video-3-home.jpg)
+		grid-area: video3
+.videobox
+	transition: 0.5s
+	display: none
+	z-index: 100
+	width: 960px
+	height: 80vh
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+	background-color: white
+	margin: 5px
+	video
+		display: none
+		position: absolute
+		height: 80%
+		margin: 70px 100px
+	button
+		background-image: url(../images/cancel.png)
+		background-color: transparent
+		background-size: contain
+		border: none
+		width: 32px	
+		height: 32px	
+		position: absolute
+		top: 1%
+		left: 99%
+		transform: translateX(-100%)
+		&:hover
+			cursor: pointer
+		&:focus
+			outline: none
