@@ -1,10 +1,10 @@
 .video
-	height: 1100px
+	height: 1000px
 	color: white
 	display: grid
 	grid-template-columns: repeat(3, 1fr)
 	grid-template-rows: repeat(8, 1fr)
-	grid-template-areas: "welcome welcome welcome" "welcome welcome welcome" "video1 video2 video3" "video1 video2 video3" "footer footer footer" "footer footer footer" "footer footer footer"
+	grid-template-areas: "welcome welcome welcome" "welcome welcome welcome" "video1 video2 video3" "video1 video2 video3" "logo nav nav" "logo nav nav" "logo nav nav" "policy rights rights"
 	.welcome
 		background-color: #00A0E3
 		grid-area: welcome
@@ -48,6 +48,66 @@
 		background:
 			image: url(../images/video-3-home.jpg)
 		grid-area: video3
+	.logo
+		grid-area: logo
+		position: relative
+		a
+			position: absolute
+			display: block
+			background-size: contain
+			background-image: url(../images/logo.png)
+			width: 335px
+			height: 270px
+			top: 50%
+			margin-top: -135px
+			left: 50%
+			margin-left: -168px
+	.footnav
+		grid-area: nav
+		color: #333
+		display: flex
+		flex-direction: column
+		font-family: "Dosis", 'sans-serif'
+		font-size: 20px
+		margin-left: 20px
+		justify-content: center
+		font-weight: 500
+		a
+			text-decoration: none
+			color: #333
+			&:nth-of-type(1)
+				font-weight: 700
+			&:hover
+				font-weight: 700
+	.policy
+		grid-area: policy
+		background-color: #C7C7C3
+		display: flex
+		align-items: center
+		justify-content: center
+		font-size: 18px
+		font-family: "Dosis", 'sans-serif'
+		a
+			margin: 0 5px
+			text-decoration: none
+			color: #333
+			&:hover
+				text-decoration: underline
+		span
+			color: #333
+	.rights
+		grid-area: rights
+		background-color: #C7C7C3
+		p
+			font-family: "Dosis", 'sans-serif'
+			font-weight: 600
+			font-size: 18px
+			color: #333
+			line-height: 100px
+			white-space: nowrap
+			float: right
+			vertical-align: middle
+			margin-right: 10px
 .videobox
 	transition: 0.5s
 	display: none
